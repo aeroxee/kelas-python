@@ -1,0 +1,942 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Pengenalan Python dan Variabel - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pengenalan-python-dan-variabel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pengenalan Python dan Variabel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kelas Python KafeKoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pengenalan Python dan Variabel
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pengenalan Python dan Variabel
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa itu Python?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apa itu Python?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciri-ciri-utama-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciri-ciri utama python:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kegunaan-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kegunaan Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalasi-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalasi Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-lingkungan-kerja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Lingkungan Kerja
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Membuat Lingkungan Kerja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-membuat-lingkungan-environtment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cara membuat lingkungan (environtment)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#program-hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program Hello World
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-bersifat-dinamis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python bersifat dinamis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apa-itu-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa itu Python?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apa itu Python?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ciri-ciri-utama-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciri-ciri utama python:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kegunaan-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kegunaan Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalasi-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalasi Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#membuat-lingkungan-kerja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Membuat Lingkungan Kerja
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Membuat Lingkungan Kerja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-membuat-lingkungan-environtment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cara membuat lingkungan (environtment)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#program-hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program Hello World
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-bersifat-dinamis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python bersifat dinamis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="pengenalan-python-dan-variabel">Pengenalan Python dan Variabel</h1>
+<h2 id="apa-itu-python">Apa itu Python?</h2>
+<ul>
+<li>Python adalah bahasa pemrograman tingkat tinggi yang mudah dipelajari.</li>
+<li>Python diciptakan oleh Guido Van Rossum pada akhir 1980-an.</li>
+<li>Python dirancang dengan fokus pada keterbacaan kode dan produktifitas pengembangan.</li>
+</ul>
+<h3 id="ciri-ciri-utama-python">Ciri-ciri utama python:</h3>
+<ol>
+<li>
+<p>Mudah Dipelajari dan Dibaca:</p>
+<ul>
+<li>Python menggunakan sintaks yang jelas dan ekspresif, membuatnya mudah dipelajari dan dibaca oleh programmer baru maupun yang berpengalaman.</li>
+</ul>
+</li>
+<li>
+<p>Interpretatif:</p>
+<ul>
+<li>Python adalah bahasa interpretatif, yang berarti kode Anda dieksekusi baris per baris oleh interpreter tanpa perlu dikompilasi terlebih dahulu.</li>
+</ul>
+</li>
+<li>
+<p>Dinamis dan Tipe Data Dinamis:</p>
+<ul>
+<li>Python adalah bahasa pemrograman dinamis, yang berarti Anda tidak perlu mendeklarasikan tipe variabel secara eksplisit. Interpreter Python menangani tipe data secara otomatis.</li>
+</ul>
+</li>
+<li>
+<p>Multiparadigma:</p>
+<ul>
+<li>Python mendukung paradigma pemrograman seperti pemrograman berorientasi objek (OOP), pemrograman prosedural, dan pemrograman fungsional.</li>
+</ul>
+</li>
+<li>
+<p>Ekosistem dan Komunitas yang Kuat:</p>
+<ul>
+<li>Python memiliki ekosistem yang kaya dengan berbagai pustaka dan modul yang mendukung berbagai aplikasi, mulai dari pengembangan web hingga kecerdasan buatan.</li>
+</ul>
+</li>
+<li>
+<p>Portabel:</p>
+<ul>
+<li>Kode Python dapat dijalankan di berbagai platform dan sistem operasi, termasuk Windows, macOS, dan Linux.</li>
+</ul>
+</li>
+<li>
+<p>Pemeliharaan Kode yang Mudah:</p>
+<ul>
+<li>Dengan fokus pada keterbacaan dan kesederhanaan, Python mendorong gaya penulisan kode yang bersih dan mudah dipelihara.</li>
+</ul>
+</li>
+</ol>
+<h3 id="kegunaan-python">Kegunaan Python</h3>
+<p>Python memiliki berbagai kegunaan dan telah menjadi salah satu bahasa pemrograman yang paling populer dan serbaguna. Berikut adalah beberapa kegunaan utama Python:</p>
+<ol>
+<li>
+<p>Pengembangan Web:</p>
+<ul>
+<li>Python digunakan dalam berbagai kerangka kerja web seperti Django dan Flask untuk membangun aplikasi web yang efisien dan skalabel.</li>
+</ul>
+</li>
+<li>
+<p>Ilmu Data dan Analisis:</p>
+<ul>
+<li>Python menjadi bahasa pemrograman utama dalam ilmu data dan analisis data. Pustaka seperti NumPy, Pandas, dan Matplotlib membantu dalam manipulasi data, analisis statistik, dan visualisasi.</li>
+</ul>
+</li>
+<li>
+<p>Kecerdasan Buatan (AI) dan Pembelajaran Mesin (ML):</p>
+<ul>
+<li>Python sangat populer dalam pengembangan proyek kecerdasan buatan dan machine learning. Framework seperti TensorFlow dan PyTorch banyak digunakan untuk mengembangkan model ML dan DL.</li>
+</ul>
+</li>
+<li>
+<p>Automasi dan Skriping:</p>
+<ul>
+<li>Python sering digunakan untuk menulis skrip dan otomasi tugas-tugas sistem atau tugas-tugas yang berulang. Hal ini membuatnya menjadi pilihan yang baik untuk administrasi sistem dan otomasi tugas-tugas sehari-hari.</li>
+</ul>
+</li>
+<li>
+<p>Pengembangan Perangkat Lunak Umum:</p>
+<ul>
+<li>Python dapat digunakan untuk mengembangkan berbagai jenis perangkat lunak, mulai dari aplikasi desktop hingga perangkat lunak server.</li>
+</ul>
+</li>
+<li>
+<p>Pengembangan Game:</p>
+<ul>
+<li>Dengan bantuan pustaka seperti Pygame, Python dapat digunakan untuk mengembangkan permainan sederhana hingga permainan yang lebih kompleks.</li>
+</ul>
+</li>
+<li>
+<p>Pengembangan Aplikasi Mobile:</p>
+<ul>
+<li>Meskipun bukan pilihan utama untuk pengembangan aplikasi mobile, Python dapat digunakan dengan kerangka kerja seperti Kivy atau BeeWare untuk membangun aplikasi mobile lintas platform.</li>
+</ul>
+</li>
+<li>
+<p>Pengembangan Situs Web dan API:</p>
+<ul>
+<li>Python dapat digunakan untuk mengembangkan situs web dan API dengan bantuan kerangka kerja seperti Flask atau FastAPI.</li>
+</ul>
+</li>
+<li>
+<p>Pengujian Perangkat Lunak:</p>
+<ul>
+<li>Python digunakan secara luas dalam pengujian perangkat lunak dengan memanfaatkan kerangka kerja seperti Pytest.</li>
+</ul>
+</li>
+<li>
+<p>Pengembangan IoT (Internet of Things):</p>
+<ul>
+<li>Python digunakan dalam pengembangan perangkat IoT untuk mengendalikan dan mengumpulkan data dari perangkat keras.</li>
+</ul>
+</li>
+</ol>
+<h3 id="instalasi-python">Instalasi Python</h3>
+<p><strong>Windows</strong>:</p>
+<ol>
+<li>
+<p>Unduh Instalator:</p>
+<ul>
+<li>Kunjungi situs web resmi Python di python.org.</li>
+<li>Klik pada tombol "Downloads" di bagian atas halaman.</li>
+<li>Pilih versi Python terbaru yang sesuai dengan sistem operasi Anda (misalnya, Python 3.9.x).</li>
+</ul>
+</li>
+<li>
+<p>Mulai Instalasi:</p>
+<ul>
+<li>Buka berkas instalator yang telah diunduh.</li>
+<li>Pilih opsi "Add Python 3.x to PATH" selama proses instalasi.</li>
+<li>Klik "Install Now" dan tunggu proses instalasi selesai.</li>
+</ul>
+</li>
+<li>
+<p>Verifikasi Instalasi:</p>
+<ul>
+<li>Buka Command Prompt atau PowerShell.</li>
+<li>Ketik <code>python --version atau python -V</code> untuk memastikan Python telah terinstal dengan benar.</li>
+</ul>
+</li>
+</ol>
+<p><strong>macOS</strong>:</p>
+<ol>
+<li>
+<p>Instalasi Homebrew (Opsional):</p>
+<ul>
+<li>Jika Anda menggunakan Homebrew, Anda dapat menginstal Python dengan perintah: brew install python.</li>
+</ul>
+</li>
+<li>
+<p>Unduh Instalator:</p>
+<ul>
+<li>Kunjungi situs web resmi Python di python.org.</li>
+<li>Klik pada tombol "Downloads" di bagian atas halaman.</li>
+<li>Pilih versi Python terbaru yang sesuai dengan sistem operasi Anda (misalnya, Python 3.9.x).</li>
+</ul>
+</li>
+<li>
+<p>Mulai Instalasi:</p>
+<ul>
+<li>Buka berkas instalator yang telah diunduh.</li>
+<li>Ikuti petunjuk pada layar untuk menyelesaikan instalasi.</li>
+</ul>
+</li>
+<li>
+<p>Verifikasi Instalasi:</p>
+<ul>
+<li>Buka Terminal.</li>
+<li>Ketik <code>python3 --version atau python3 -V</code> untuk memastikan Python telah terinstal dengan benar.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Linux</strong>:</p>
+<ol>
+<li>
+<p>Menggunakan Package Manager:</p>
+<ul>
+<li>Banyak distribusi Linux sudah menyertakan Python. Gunakan package manager distribusi Anda untuk menginstal Python. Contoh untuk Ubuntu: <code>sudo apt-get install python3</code>.</li>
+</ul>
+</li>
+<li>
+<p>Menggunakan Instalator Resmi:</p>
+<ul>
+<li>Kunjungi situs web resmi Python di python.org.</li>
+<li>Klik pada tombol "Downloads" di bagian atas halaman.</li>
+<li>Pilih versi Python terbaru yang sesuai dengan sistem operasi Anda (misalnya, Python 3.9.x).</li>
+<li>Ikuti petunjuk pada halaman tersebut untuk menginstal Python.</li>
+</ul>
+</li>
+<li>
+<p>Verifikasi Instalasi:</p>
+<ul>
+<li>Buka Terminal.</li>
+<li>Ketik <code>python3 --version atau python3 -V</code> untuk memastikan Python telah terinstal dengan benar.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="membuat-lingkungan-kerja">Membuat Lingkungan Kerja</h2>
+<p>Lingkungan kerja pengembangan (development environment) sangat penting dalam pengembangan perangkat lunak. Lingkungan kerja menyediakan alat dan sumber daya yang diperlukan untuk menulis, menguji, dan menjalankan kode. Berikut adalah beberapa kegunaan utama dari lingkungan kerja pengembangan:</p>
+<ol>
+<li>Pengelolaan Proyek:<ul>
+<li>Lingkungan kerja menyediakan struktur untuk mengelola proyek perangkat lunak. Ini mencakup organisasi struktur direktori, manajemen dependensi, dan pengelolaan versi menggunakan sistem kontrol versi seperti Git.</li>
+</ul>
+</li>
+<li>Pengkodean yang Efisien:<ul>
+<li>Lingkungan kerja biasanya dilengkapi dengan editor kode yang kuat dan fitur otomatisasi, seperti penyorotan sintaks, penyelesaian kode, dan saran refaktor. Ini membantu pengembang menulis kode dengan lebih efisien.</li>
+</ul>
+</li>
+<li>Manajemen Dependensi:<ul>
+<li>Lingkungan kerja memungkinkan pengelolaan dependensi proyek dengan menggunakan manajer paket seperti pip untuk Python atau npm untuk JavaScript. Ini membantu mengelola versi dan instalasi pustaka atau modul pihak ketiga.</li>
+</ul>
+</li>
+<li>Debugging dan Profiling:<ul>
+<li>Lingkungan kerja menyediakan alat untuk debugging kode, memantau kinerja, dan melakukan profil terhadap aplikasi. Ini membantu pengembang mengidentifikasi dan mengatasi masalah dalam kode mereka.</li>
+</ul>
+</li>
+<li>Uji dan Otomasi:<ul>
+<li>Lingkungan kerja mendukung otomatisasi pengujian dengan menyediakan kerangka pengujian dan alat pengujian unit. Ini mempermudah pengembang untuk menguji fungsionalitas kode mereka secara otomatis.</li>
+</ul>
+</li>
+<li>Dokumentasi:<ul>
+<li>Lingkungan kerja dapat mendukung pembuatan dokumentasi dengan menyediakan alat untuk menghasilkan dokumentasi otomatis dari kode sumber. Ini membantu dalam memelihara dokumentasi proyek dengan lebih efisien.</li>
+</ul>
+</li>
+<li>Integrasi dengan Alat Eksternal:<ul>
+<li>Lingkungan kerja dapat terintegrasi dengan berbagai alat eksternal seperti sistem manajemen basis data, layanan pihak ketiga, atau alat kolaborasi tim. Ini memfasilitasi kerja kolaboratif dan integrasi dengan infrastruktur proyek.</li>
+</ul>
+</li>
+<li>Pengembangan Berbasis Cloud:<ul>
+<li>Beberapa lingkungan kerja menyediakan dukungan untuk pengembangan berbasis cloud, memungkinkan tim untuk bekerja secara terdistribusi dan menyimpan proyek mereka secara aman di cloud.</li>
+</ul>
+</li>
+<li>Optimasi Kinerja:<ul>
+<li>Lingkungan kerja dapat membantu dalam mengoptimalkan kinerja aplikasi dengan menyediakan alat analisis dan pemantauan kinerja.</li>
+</ul>
+</li>
+<li>Keamanan:<ul>
+<li>Lingkungan kerja dapat menyertakan alat untuk memeriksa keamanan kode, mengidentifikasi potensi kerentanan, dan memastikan kepatuhan terhadap praktik keamanan.</li>
+</ul>
+</li>
+<li>Konfigurasi dan Pengaturan:<ul>
+<li>Lingkungan kerja memungkinkan pengelolaan konfigurasi proyek, termasuk pengaturan lingkungan dan variabel konfigurasi proyek.</li>
+</ul>
+</li>
+</ol>
+<h3 id="cara-membuat-lingkungan-environtment">Cara membuat lingkungan (environtment)</h3>
+<ol>
+<li>Buka terminal / cmd pada komputer anda.</li>
+<li>Buat folder dan masuk kedalam folder
+<div class="language-bash highlight"><span class="filename">For Linux/Unix</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>Projects
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>Projects
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mkdir<span class="w"> </span>Python
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>Python
+</span></code></pre></div></li>
+<li>Lalu install Virtualenv dengan menggunakan PIP.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install virtualenv
+</span></code></pre></div></li>
+<li>Kemudian buat environtmennya
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># python -m venv nama-environtment
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># Example
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>python -m venv kelaspython
+</span></code></pre></div></li>
+<li>Lalu aktifkan environtment dengan cara
+<div class="language-text highlight"><span class="filename">Linux</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>source kelaspython/bin/activate
+</span></code></pre></div>
+<div class="language-text highlight"><span class="filename">Windows</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.\kelaspython\Scripts\bin\activate.bat
+</span></code></pre></div></li>
+</ol>
+<h2 id="program-hello-world">Program Hello World</h2>
+<ol>
+<li>Buat file didalam folder yang telah kita buat <a href="#cara-membuat-lingkungan-environtment">sebelumnya</a>.</li>
+<li>Buat file dengan nama <code>helloworld.py</code>.</li>
+<li>Lalu isi dengan kode berikut:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</span></code></pre></div></li>
+<li>Lalu jalankan perintah di CMD: <code>python helloworld.py</code>. Dan output berupa:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Hello World
+</span></code></pre></div></li>
+</ol>
+<hr />
+<h2 id="variable">Variable</h2>
+<p>Dalam pemrograman, variabel adalah suatu lokasi penyimpanan yang diberi nama dan digunakan untuk menyimpan nilai atau informasi. Variabel memungkinkan programmer untuk menetapkan nama kepada suatu nilai atau data, sehingga nantinya nilai tersebut dapat diakses dan dimanipulasi dalam program.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Mendefinisikan variabel dengan nama `umur` dan memberikan nilai 25</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">umur</span> <span class="o">=</span> <span class="mi">19</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Menggunakan variabel dalam operasi matematika</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">tahun_lahir</span> <span class="o">=</span> <span class="mi">2024</span> <span class="o">-</span> <span class="n">umur</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tahun lahir:&quot;</span><span class="p">,</span> <span class="n">tahun_lahir</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="python-bersifat-dinamis">Python bersifat dinamis</h3>
+<p>Python adalah bahasa pemrograman yang bersifat dinamis. artinya kita tidak perlu mendeklarasikan tipe data untuk variabel. Tipe data variable ditentukan secara otomatis saat nilai diberikan. Berikut perbedaan bahasa python yang bersifat dinamis dengan bahasa C yang bersifat statis.</p>
+<div class="language-py highlight"><span class="filename">Bahasa Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">angka</span> <span class="o">=</span> <span class="mi">40</span>      <span class="c1"># variabel angka memiliki tipe data integer secara otomatis.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">teks</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>  <span class="c1"># variabel teks memiliki tipe data string secara otomatis.</span>
+</span></code></pre></div>
+<div class="language-c highlight"><span class="filename">Bahasa C</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">angka</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span><span class="w">         </span><span class="c1">// variabel angka memiliki tipe data integer</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">teks</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w">  </span><span class="c1">// variabel angka memiliki tipe data char.</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Kelas Python KafeKoding">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kelas Python KafeKoding
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://facebook.com/fajhrinazgul" target="_blank" rel="noopener" title="facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/kafekoding" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "search.highlight", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
