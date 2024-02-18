@@ -1,3 +1,8 @@
+---
+title: Introduction
+description: Pengenalan Kelas Python.
+---
+
 # Kelas Python KafeKoding
 
 Selamat datang di kelas Python ini! 🐍

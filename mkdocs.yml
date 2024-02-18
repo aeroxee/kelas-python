@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Kelas Python
 theme:
   name: material
   palette: 
@@ -27,6 +27,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - meta
 plugins:
   - search
 extra:
