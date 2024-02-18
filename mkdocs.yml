@@ -1,0 +1,37 @@
+site_name: My Docs
+theme:
+  name: material
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - search.highlight
+    - navigation.footer
+  logo: assets/logo.png
+  favicon: assets/logo.png
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+plugins:
+  - search
+extra:
+  social:
+    - icon: fontawesome/brands/facebook 
+      link: https://facebook.com/fajhrinazgul
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/kafekoding
