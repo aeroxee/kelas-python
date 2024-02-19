@@ -13,49 +13,49 @@ Kelas ini dirancang untuk membantu Anda memahami dan menguasai bahasa pemrograma
 
 ## Daftar Isi
 
-1. **Pengenalan Python Dan Variable**
+1. [**Pengenalan Python Dan Variable**](p1_pengenalan_python_dan_variabel.md)
     - Tentang Python
     - Instalasi Python dan PIP
     - Apa itu variabel
     - Cara mendeklarasikan Variabel.
 
-2. **Belajar Git dan Github Dasar**
+2. [**Belajar Git dan Github Dasar**](p2_belajar_git_dan_github_dasar.md)
     - Peserta mampu mengaplikasikan git command (init, add, push, pull, branch, merge, remote)
 
-3. **Tipe data dan Operator**
+3. [**Tipe data dan Operator**](p3_tipe_data_dan_operator.md)
     - Tipe data integer
     - Tipe data float
     - Tipe data string
     - Tipe data boolean
     - Tipe data dll
 
-4. **Struktur Kontrol**
+4. [**Struktur Kontrol**](p4_struktur_control.md)
     - Percabangan If-else
     - Perulangan
 
-5. **Fungsi Dan Modul**
+5. [**Fungsi Dan Modul**](p5_fungsi_dan_modul.md)
     - Konsep dasar fungsi
     - Konsep dasar modul
 
-6. **Algoritma Dasar**
+6. [**Algoritma Dasar**](p6_algoritma_dasar.md)
     - Memahami dan mampu menerapkan algoritma dasar seperti pencarian dan pengurutan.
 
-7. **Struktur Data**
+7. [**Struktur Data**](p7_struktur_data.md)
     - List, Tuple, Set, Dictionary
     - Manipulasi Data
 
-8. **Pemrosesan File**
+8. [**Pemrosesan File**](p8_pemrosesan_file.md)
     - Membuat file
     - Mengedit file
     - Menghapus file
     - dan memindahkan file
 
-9. **OOP (Object-Oriented Programming)**
+9. [**OOP (Object-Oriented Programming)**](p9_oop.md)
     - Pengenalan OOP
     - Pembuatan Class dan Objek
     - Pewarisan dan Polimorfisme
 
-10. **Pengenalan Web Development Dengan Framework Django**
+10. [**Pengenalan Web Development Dengan Framework Django**](pengenalan_django.md)
     - Modeling database
     - Membuat view handler
     - Menghubungkan static file
