@@ -1,6 +1,9 @@
 site_name: Kelas Python
+repo_url: https://github.com/Aeroxee/kelas-python/
+repo_name: Aeroxee/kelas-python
 theme:
   name: material
+  language: id
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -17,8 +20,14 @@ theme:
     - navigation.instant.prefetch
     - search.highlight
     - navigation.footer
+    - navigation.tabs
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
   logo: assets/logo.png
   favicon: assets/logo.png
+  icon:
+    repo: fontawesome/brands/git-alt
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -36,3 +45,25 @@ extra:
       link: https://facebook.com/fajhrinazgul
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/kafekoding
+    - icon: fontawesome/brands/github
+      link: https://github.com/Aeroxee
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+nav:
+  - Home: index.md
+  - Memulai: memulai.md
+  - Pertemuan:
+    - Pengenalan Python dan Variabel: pertemuan/pengenalan_python_dan_variabel.md
+    - Belajar Git Dasar: pertemuan/belajar_git_dan_github_dasar.md
+    - Tipe Data & Operator: pertemuan/tipe_data_dan_operator.md
+    - Struktur Control: pertemuan/struktur_control.md
+    - Fungsi & Modul: pertemuan/fungsi_dan_modul.md
+    - Algoritma Dasar: pertemuan/algoritma_dasar.md
+    - Struktur Data: pertemuan/struktur_data.md
+    - Pemrosesan File: pertemuan/pemrosesan_file.md
+    - OOP: pertemuan/oop.md
+    - Pengenalan Django: pertemuan/pengenalan_django.md
+
+copyright: Copyright &copy; 2021 - 2026 KafeKoding
